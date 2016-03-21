@@ -1,685 +1,108 @@
-
 <!DOCTYPE html>
 <html>
+
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <title> - jsFiddle demo by marktherain</title>
-  
-  <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
-  
-  
-  
-  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
-  
-    
-      <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-    
-    
-  
-    
-      <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
-    
-    
-  
-    
-    
-      <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-    
-  
-  <style type='text/css'>
-    h2{
-    padding:10px;
-    padding-top:0px;
-    border-style:solid;
-    border-color:#ddd;
-font-weight:bold;
-    border-width: 0px 0px 0px 0px;
-    font-size:22px;
-    margin:0px;
-    margin-top:5px;
-} 
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Visual Algorithm Experiments</title>
 
-h3{
-    padding:10px;
-    padding-top:0px;
-    border-style:solid;
-    border-color:#ddd;
-font-weight:bold;
-    border-width: 0px 0px 1px 0px;
-    font-size:12px;
-    margin:0px;
-    margin-top:5px;
-} 
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/cosmo/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
+    <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
+    <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
-#title {
-    float:left;
-    font-weight:bold;
-     font-size:38px;
-    line-height:36px;
-    margin-left:10px;
-
-     width:auto;
-    padding:0px;
- }
- #menu-left {
-     margin-left:20px;
-     float:left;
-        display:inline-block;
-     margin-top:7px;
-     z-index:5;
-
- }
- #menu-right {
-     float:right;
-    display:inline-block;
-     margin-top:7px;
-    margin-left:20px;
-    margin-right:20px;
-     z-index:5;
-
- }
-
- body {
-     margin:0px;
-     overflow:scroll;
-     background-color:#eee;
-     -webkit-user-select: none;
-     /* webkit (safari, chrome) browsers */
-     -moz-user-select: none;
-     /* mozilla browsers */
-     -khtml-user-select: none;
-     /* webkit (konqueror) browsers */
-     -ms-user-select: none;
-     /* IE10+ */
- }
- #c {
-     margin: auto;
-     margin-top: 5px;
-     left: 0;
-     bottom: 0;
-     right: 0;
-     overflow:hidden;
-    box-shadow: 0px 2px 10px #aaa;
-     background-color:#fff;
-     cursor:crosshair;
-    margin-left:20px;
- }
-
-
-
-
- 
-
- form ul li {
-     height:28px;
-     line-height:20px;
-     padding:0px;
-     margin:0px;
-     list-style: none;
- }
- form ul {
-     padding:0px;
-     padding-left:10px;
-     padding-top:5px;
-     margin: 0px auto;
-     text-align: right;
- }
-
-
-#sidebar{
-    display:block;
-      width:150px;
-    background-color:#fff;
-    height:100%;
-    position:fixed;
-    left:-150px;
-    border-style:solid;
-    border-color:#aaa;
-    border-width:0px;
-        border-right-width:1px;
-    overflow:scroll;
-    z-index:6;
-            font-size:17px;
-}
-
-#sidebar ul li a{
-    display:block;
- list-style:none;
-    border-style:solid;
-    border-color:#ddd;
-    border-width: 0px 0px 1px 0px;
-    padding:10px;
-   
-}
-
-#sidebar ul li a:hover{
-    background-color:#f5f5f5;
-}
-
-#sidebar ul li.active{
-     display:block;
- list-style:none;
-    border-style:solid;
-    border-color:#ddd;
-    border-width: 0px 0px 1px 0px;
-    padding:10px;
-}
-
-
-
-#back2{
-    float:left;
-}
-
-#sidebar ul {
-
-    margin-left:-40px;
-   
-}
-
-
-#article{
-    position:absolute;
-    width:auto;
-    top:0px;
-    bottom:0px;
-    left:0px;
-    right:0px;
-
-
-}
-
-
-
-/* styles for form*/
- .c {
-     border-style:solid;
-     border-width:1px;
-     border-color:#aaa;
-     box-shadow:0px 0px 5px #bbb;
-     width:33px;
-     padding:0px;
-     padding-left:2px;
- }
- #col1 {
-     float:right;
-     width:auto;
- }
- .menu1 {
-     width:250px;
-     padding:20px;
-     padding-top:10px;
- }
- #col2 {
-     float:right;
-     width:auto;
-     padding-left:10px;
- }
- .clear {
-     clear:both;
-     display:block;
- }
- h2 {
-     font-size:20px;
-     margin-bottom:0px;
- }
- hr {
-     border-style:solid;
-     border-width:0px;
-     border-top-width:1px;
-     border-color:#ddd;
-     padding:0px;
-     margin:0px;
- }
- form ul li {
-     height:28px;
-     line-height:20px;
-     padding:0px;
-     margin:0px;
-     list-style: none;
- }
- form ul {
-     padding:0px;
-     padding-left:10px;
-     padding-top:5px;
-     margin: 0px auto;
-     text-align: right;
- }
- p.disclaimer {
-     padding-top:15px;
-     max-width:250px;
-     text-align:justify;
-     color:#444;
-     font-size:12px;
-     line-height:16px;
- }
-
-.btn{
-    outline: 0 !important;
-}
-  </style>
-  
-
-
-<script type='text/javascript'>//<![CDATA[ 
-$(window).load(function(){
-/* quilt
-
-holy parameters batman...
-
-
-todo:
-    after click.. remove focus/outline
-    see the button color, it gets stuck - and that messes with my OCD
-
-
-
-*/
-
-//global vars
-var canvas, ctx, color1, w, h;
-var starting_polygon = new Array();
-var side_bar_vis = false;
-var i = 6;
-var starting_iter = 14;
-var max_ratio = 3;
-var skew = .07; //try values between 0 and 1
-var min_squareness = 3;
-
-
-//starting color
-c1 = new Color(125, 125, 125, 1);
-c2 = new Color(255, 125, 125, 1);
-
-function init() {
-    canvas = document.getElementById('c');
-    w = canvas.width = window.innerWidth - 40;
-    h = canvas.height = window.innerHeight - 68;
-    ctx = canvas.getContext('2d');
-    starting_polygon = [{
-        x: 0,
-        y: 0
-    }, {
-        x: w,
-        y: 0
-    }, {
-        x: w,
-        y: h
-    }, {
-        x: 0,
-        y: h
-    }];
-    var dataURL = canvas.toDataURL();
-    ctx.fillStyle = "rgba(255,255,255,1)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-}
-
-function run(arr, counter) {
-
-    for (var i = 0; i < arr.length; i++) {
-
-
-
-        //print1(arr[i]);
-        c3 = new Color(0, 0, 0, 1);
-        c3.randC();
-        draw_polygon(c3, arr[i]);
-
-        var iter = 9; //checks for squareness
-        while (iter > 0) {
-            iter--;
-            new_arr = split_polygon(arr[i]);
-            if (squareness(new_arr) < min_squareness) break;
-        }
-
-        if (counter > 0) {
-
-            run(new_arr, --counter);
-
-        } else {
-            break;
-        }
-    };
-
-}
-
-init();
-run([starting_polygon], starting_iter);
-
-function squareness(arr) {
-    var area = 0;
-    var len;
-    var wid;
-    for (var i = 0; i < arr.length; i++) {
-        len = arr[i][1].x - arr[i][0].x;
-        wid = arr[i][2].y - arr[i][1].y;
-        area += Math.abs((len - wid) / Math.min(len, wid));
-    };
-    return area;
-}
-
-function split_polygon(p) {
-    var pt1, pt2, p1, p2, slopes;
-    pt1 = {
-        x: 0,
-        y: 0
-    };
-    pt2 = {
-        x: 0,
-        y: 0
-    };
-    p1 = new Array();
-    p2 = new Array();
-
-    //pick two points on two separate edges of the polygon..
-    r1 = getRandomInt(2, max_ratio + 1);
-    r2 = getRandomInt(1, r1 - 1) + getRandomInt(0, 1) * skew;
-    r3 = r1 - r2;
-
-    //just two possibilities hor or ver
-    rp1 = getRandomInt(0, 1);
-    rp2 = rp1 + 2;
-
-    pt1.x = (p[(rp1) % 4].x * r2 + p[(rp1 + 1) % 4].x * r3) / r1;
-    pt1.y = (p[(rp1) % 4].y * r2 + p[(rp1 + 1) % 4].y * r3) / r1;
-
-
-    temp2 = r2;
-    temp3 = r3;
-    r1 = r1;
-    r2 = temp3 + getRandomInt(0, 1) * skew;
-    r3 = r1 - r2;
-
-    pt2.x = (p[(rp2) % 4].x * r2 + p[(rp2 + 1) % 4].x * r3) / r1;
-    pt2.y = (p[(rp2) % 4].y * r2 + p[(rp2 + 1) % 4].y * r3) / r1;
-
-    //now we have 6 points... use these to return 2 polygons..    
-    for (var i = 0; i < p.length; i++) {
-        p1[i] = {
-            x: p[i].x,
-            y: p[i].y
-        };
-        p2[i] = {
-            x: p[i].x,
-            y: p[i].y
-        };
-
-    }
-
-    if (rp1 == 1 && rp2 == 3) {
-        p1[2] = pt1;
-        p1[3] = pt2;
-        p2[1] = pt1;
-        p2[0] = pt2;
-    }
-
-    if (rp1 == 0 && rp2 == 2) {
-        p1[1] = pt1;
-        p1[2] = pt2;
-        p2[3] = pt2;
-        p2[0] = pt1;
-    }
-
-    return [p1, p2];
-}
-
-function print1(p) {
-    var tempStr = "";
-    for (i in p) {
-        tempStr += p[i].x;
-        tempStr += ",";
-        tempStr += p[i].y;
-        tempStr += " | ";
-    }
-    alert(tempStr);
-}
-
-function draw_polygon(color, p) {
-
-    ctx.fillStyle = color.toRGBA();
-    ctx.lineWidth = .09;
-    ctx.beginPath();
-    ctx.moveTo(p[0].x, p[0].y);
-    for (i in p) {
-        ctx.lineTo(p[i].x, p[i].y);
-    }
-    ctx.closePath();
-    ctx.fill();
-    ctx.stroke();
-}
-
-function Color(r, g, b, o) {
-    this.r = 0;
-    this.g = 0;
-    this.b = 0;
-    this.o = 1;
-
-    this.r = r;
-    this.g = g;
-    this.b = b;
-    this.o = o;
-    this.toRGBA = function () {
-        return "rgba(" + this.r + "," + this.g + "," + this.b + "," + this.o + ")";
-    }
-    this.randC = function () {
-        /*this.r = getRandomInt(50, 255);
-        this.g = getRandomInt(50, 100);
-        this.b = getRandomInt(50, 150);
-        this.o = .5;*/
-        var rg = getRandomInt(0, 150);
-        this.r = getRandomInt(70, 100) + rg;
-        this.g = getRandomInt(0, 1) + rg;
-        this.b = getRandomInt(20, 200);
-        this.o = .5;
-
-    }
-}
-
-$('#redraw').click(function (e) {
-    run([starting_polygon], 14);
-});
-
-$('#clear').click(function (e) {
-    ctx.fillStyle = "rgba(255,255,255,1)";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-});
-
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-function SaveToDisk(fileURL, fileName) {
-    // for non-IE
-    if (!window.ActiveXObject) {
-        var save = document.createElement('a');
-        save.href = fileURL;
-        save.target = '_blank';
-        save.download = fileName || 'unknown';
-
-        var event = document.createEvent('Event');
-        event.initEvent('click', true, true);
-        save.dispatchEvent(event);
-        (window.URL || window.webkitURL).revokeObjectURL(save.href);
-    }
-
-    // for IE
-    else if ( !! window.ActiveXObject && document.execCommand) {
-        var _window = window.open(fileURL, '_blank');
-        _window.document.close();
-        _window.document.execCommand('SaveAs', true, fileName || fileURL)
-        _window.close();
-    }
-}
-
-$('#save').click(function (e) {
-    var dataURL = canvas.toDataURL();
-    //document.getElementById('canvasImg').src = dataURL;
-    SaveToDisk(dataURL, "canvas-experiments-quilt");
-});
-
-//ui logic
-$('.dropdown-menu').find('form').click(function (e) {
-    e.stopPropagation();
-});
-
-$("#opt-start-len").keyup(function () {
-    start_len = $(this).val();
-}).keyup();
-
-$("#opt-start-width").keyup(function () {
-    start_width = $(this).val();
-}).keyup();
-
-$("#opt-branches").keyup(function () {
-    branches = $(this).val();
-}).keyup();
-
-$("#opt-len-dec").keyup(function () {
-    len_dec = $(this).val();
-}).keyup();
-
-$('.back1').click(function (event) {
-    event.preventDefault();
-    if (!side_bar_vis){
-     $('#sidebar').animate({left:"0px"},250);
-        $('#article').animate({left:"150px"},250);
-        side_bar_vis = true;
-        
-        
-    } else{
-        $('#sidebar').animate({left:"-150px"},250);
-        $('#article').animate({left:"0px"},250);
-        side_bar_vis = false;
-        
-    }
-}
-);
-
-$(document).ready(function() {
-    
-$(function () { 
-    
-    $("[data-toggle2='tooltip']").tooltip({
-    placement: "bottom"
-}); });
-    
-    
-    $("[data-toggle2='tooltip']").click(function () {
-  $(this).tooltip("destroy");
- 
-});
-    
-});
-  
-
-});//]]>  
-
-</script>
-
+    <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
+
 <body>
-  <div id="sidebar">
-    <h2>Visual Algorithm Experiments</h2>
-    <h3>By: <a href="">RMKP</a></h3>
-    <ul>
-        <li><a href="#">Small Worlds</a></li>
-        <li><a href="#">Snowflake</a></li>
-        <li><a href="#">Squares</a></li>
-        <li class="active">Quilt</li>
-                <li><a href="#">Snowflake</a></li>
-        <li><a href="#">Squares</a></li>
-        <li><a href="#">Quilt</a></li>
-                <li><a href="#">Snowflake</a></li>
-        <li><a href="#">Squares</a></li>
-        <li><a href="#">Quilt</a></li>
-    </ul>
-    <p class="about"></p>
-    
-</div>
+    <div id="sidebar">
+        <h2>Visual Algorithm Experiments</h2>
+        <h3>By: <a href="">RMKP</a></h3>
+        <ul>
+            <li id="quilt" class="active"><a href="#">Quilt</a></li>
+            <li id="branches" class="link"><a href="#">Branches</a></li>
+            <li id="angles" class="link"><a href="#">Angles</a></li>
+        </ul>
+        <p class="about"></p>
 
-
-<div id="article">
-
-    <div id="menu-left">
-    <button type="button" class="btn btn-default back1" id="back2" data-toggle2="tooltip" title="links"><i class="icon-reorder icon-large"></i></button>
-  
-
-<div id="title">Quilt
-</div>
     </div>
-<div id="menu-right">
-    
-    <button type="button" class="btn btn-success" id="redraw" data-toggle2="tooltip" title="redraw"><i class="icon-refresh icon-large"></i></button>
-    <button type="button" class="btn btn-danger" id="clear" data-toggle2="tooltip" title="clear"><i class="icon-trash icon-large"></i></button>
-    
-        <div class="btn-group">
-    
-     <button type="button" class="btn btn-primary dropdown-toggle pull-right"  data-toggle2="tooltip" data-toggle="dropdown" title="options"><i class="icon-gear icon-large"></i></button>
-    
 
-       
-        
-        <div class="dropdown-menu menu1 pull-right">
-            <form>
-                 <h2>STARTING VALUES</h2>
+    <div id="article">
 
-                <hr></hr>
-                <div id="col2">
-                    <ul>
-                        <li>
-                            <input type="text" name="" value="80" class="c" maxlength="3" id="opt-start-len"></input>
-                        </li>
-                        <li>
-                            <input type="text" name="" value="2" class="c" maxlength="3" id="opt-start-width"></input>
-                        </li>
-                    </ul>
-                </div>
-                <div id="col1">
-                    <ul>
-                        <li>Length:</li>
-                        <li>Width:</li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-                 <h2>EACH ITERATION</h2>
+        <div id="menu-left">
+            <button type="button" class="btn btn-default back1" id="back2" data-toggle2="tooltip" title="links"><i class="icon-reorder icon-large"></i></button>
 
-                <hr></hr>
-                <div id="col2">
-                    <ul>
-                        <li>
-                            <input type="text" value="3" class="c" maxlength="3" id="opt-branches"></input>
-                        </li>
-                        <li>
-                            <input type="text" value="9" class="c" maxlength="3" id="opt-len-dec"></input>
-                        </li>
-                    </ul>
-                </div>
-                <div id="col1">
-                    <ul>
-                        <li>Branches:</li>
-                        <li>Length Decrement by:</li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
-                <p class="disclaimer"><strong>Note:</strong> Large values can take a very, very long time to compute. Try small changes first.</p>
-            </form>
+            <div id="title">QUILT
+            </div>
         </div>
+        <div id="menu-right">
+
+            <button type="button" class="btn btn-success" id="redraw" data-toggle2="tooltip" title="redraw"><i class="icon-refresh icon-large"></i></button>
+            <button type="button" class="btn btn-danger" id="clear" data-toggle2="tooltip" title="clear"><i class="icon-trash icon-large"></i></button>
+
+            <div class="btn-group">
+
+                <button type="button" class="btn btn-primary dropdown-toggle pull-right" data-toggle2="tooltip" data-toggle="dropdown" title="options"><i class="icon-gear icon-large"></i></button>
+
+                <div class="dropdown-menu menu1 pull-right">
+                    <form class="form">
+                        <h2>STARTING VALUES</h2>
+
+                        <hr></hr>
+                        <div id="col2">
+                            <ul>
+                                <li>
+                                    <input type="text" name="" value="80" class="c" maxlength="3" id="opt-start-len"></input>
+                                </li>
+                                <li>
+                                    <input type="text" name="" value="2" class="c" maxlength="3" id="opt-start-width"></input>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="col1">
+                            <ul>
+                                <li>Length:</li>
+                                <li>Width:</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <h2>EACH ITERATION</h2>
+
+                        <hr></hr>
+                        <div id="col2">
+                            <ul>
+                                <li>
+                                    <input type="text" value="3" class="c" maxlength="3" id="opt-branches"></input>
+                                </li>
+                                <li>
+                                    <input type="text" value="9" class="c" maxlength="3" id="opt-len-dec"></input>
+                                </li>
+                            </ul>
+                        </div>
+                        <div id="col1">
+                            <ul>
+                                <li>Branches:</li>
+                                <li>Length Decrement by:</li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                        <p class="disclaimer"><strong>Note:</strong> Large values can take a very, very long time to compute. Try small changes first.</p>
+                    </form>
+                </div>
+            </div>
+
+            <button type="button" class="btn btn-default" id="save" data-toggle2="tooltip" title="save image"><i class="icon-download-alt icon-large"></i></button>
+        </div>
+        <canvas id="c"></canvas>
+        <img id="canvasImg" alt=""></img>
+
     </div>
-    
-    
-    
-    <button type="button" class="btn btn-default" id="save" data-toggle2="tooltip" title="save image"><i class="icon-download-alt icon-large"></i></button>
-</div>
-<canvas id="c"></canvas>
-    <img id="canvasImg" alt=""></img>
-    
-    
-    </div>
-  
+
+    <script type='text/javascript' src='/ui.js'></script>
+    <script type='text/javascript' src='/quilt.js'></script>
+
 </body>
 
-
 </html>
-

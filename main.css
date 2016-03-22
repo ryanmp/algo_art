@@ -23,12 +23,19 @@
  }
  
  #title {
+     height: 43px;
+     background-color: #fff;
+     border: solid 1px #aaa;
      float: left;
-     font-size: 38px;
-     line-height: 36px;
+     font-size: 30px;
+     line-height: 42px;
+     font-weight: 300;
      margin-left: 10px;
+     padding-left: 10px;
+     padding-right: 10px;
+     vertical-align: top;
      width: auto;
-     padding: 0px;
+     bottom: 0px;
  }
  
  #menu-left {
@@ -89,7 +96,7 @@
  
  #sidebar {
      display: block;
-     width: 150px;
+     width: 160px;
      background-color: #fff;
      height: 100%;
      position: fixed;

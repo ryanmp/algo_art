@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <title>Visual Algorithm Experiments</title>
+    <title>Algorithmic Art Experiments</title>
 
     <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/cosmo/bootstrap.min.css">
@@ -12,18 +12,21 @@
     <script type='text/javascript' src='//code.jquery.com/jquery-1.9.1.js'></script>
     <script type='text/javascript' src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
+    <script type='text/javascript' src='howler.js'></script>
+
     <link rel="stylesheet" type="text/css" href="main.css">
 
 </head>
 
 <body>
     <div id="sidebar">
-        <h2>Visual Algorithm Experiments</h2>
+        <h2>Algorithmic Art Experiments</h2>
         <h3>By: <a href="">RMKP</a></h3>
         <ul>
             <li id="quilt" class="active"><a href="#">Quilt</a></li>
             <li id="branches" class="link"><a href="#">Branches</a></li>
             <li id="angles" class="link"><a href="#">Angles</a></li>
+            <li id="bezier_garden" class="link"><a href="#">Bezier Garden</a></li>
         </ul>
         <p class="about"></p>
 
@@ -42,14 +45,12 @@
             <button type="button" class="btn btn-success" id="redraw" data-toggle2="tooltip" title="redraw"><i class="icon-refresh icon-large"></i></button>
             <button type="button" class="btn btn-danger" id="clear" data-toggle2="tooltip" title="clear"><i class="icon-trash icon-large"></i></button>
 
+            <!--
             <div class="btn-group">
-
                 <button type="button" class="btn btn-primary dropdown-toggle pull-right" data-toggle2="tooltip" data-toggle="dropdown" title="options"><i class="icon-gear icon-large"></i></button>
-
                 <div class="dropdown-menu menu1 pull-right">
                     <form class="form">
                         <h2>STARTING VALUES</h2>
-
                         <hr></hr>
                         <div id="col2">
                             <ul>
@@ -69,7 +70,6 @@
                         </div>
                         <div class="clear"></div>
                         <h2>EACH ITERATION</h2>
-
                         <hr></hr>
                         <div id="col2">
                             <ul>
@@ -92,6 +92,7 @@
                     </form>
                 </div>
             </div>
+            -->
 
             <button type="button" class="btn btn-default" id="save" data-toggle2="tooltip" title="save image"><i class="icon-download-alt icon-large"></i></button>
         </div>
@@ -100,8 +101,14 @@
 
     </div>
 
-    <script type='text/javascript' src='/ui.js'></script>
+    <script type='text/javascript' src='/helper.js'></script>
+
     <script type='text/javascript' src='/quilt.js'></script>
+    <script type='text/javascript' src='/branches.js'></script>
+    <script type='text/javascript' src='/angles.js'></script>
+    <script type='text/javascript' src='/bezier_garden.js'></script>
+
+    <script type='text/javascript' src='/ui.js'></script>
 
 </body>
 
